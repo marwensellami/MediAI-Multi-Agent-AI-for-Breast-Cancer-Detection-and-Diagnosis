@@ -1,0 +1,33 @@
+{
+  "image": "app\\data\\DMID_PNG\\1024\\TIFF\\IMG011.png",
+  "date": "2026-08-09T16:34:35.169694",
+  "pixel_spacing": 0.1,
+  "detections": [
+    {
+      "id": 1,
+      "label": "Bénin",
+      "score": 0.49362921714782715,
+      "size_mm": 7.2,
+      "bbox": [
+        655,
+        406,
+        727,
+        461
+      ],
+      "surface_px": 5330
+    },
+    {
+      "id": 2,
+      "label": "Bénin",
+      "score": 0.18751688301563263,
+      "size_mm": 12.8,
+      "bbox": [
+        652,
+        597,
+        780,
+        685
+      ],
+      "surface_px": 13524
+    }
+  ]
+}

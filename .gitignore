@@ -1,0 +1,91 @@
+# === Python ===
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# === Node ===
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.next/
+
+# === Modeles IA lourds ===
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.pb
+backend/models_cache/
+backend/app/ml/models/
+backend/yolo11m.pt
+backend/yolo11m.onnx
+
+# === Base de donnees ===
+*.db
+*.sqlite
+*.sqlite3
+backend/breast_cancer.db
+
+# === IMAGES ===
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.tiff
+*.gif
+*.webp
+
+# === Dossiers de resultats YOLO ===
+backend/iou_test_results/
+backend/conf_test_results/
+backend/iou_test/
+backend/conf_test/
+backend/yolo_dataset/
+backend/detection_result/
+backend/resultats/
+backend/app/data/
+
+# === Fichiers matriciels lourds ===
+*_matrix_*.txt
+mask_*.txt
+mask_*.npy
+mask_*.png
+
+# === Documents lourds ===
+*.pdf
+*.xlsx
+*.csv
+*.zip
+*.tar
+*.gz
+
+# === Environnement ===
+.env
+.env.local
+.env.*.local
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs ===
+*.log
+logs/
+
+# === Sauvegardes Git ===
+.git.old/
+.git.bak/

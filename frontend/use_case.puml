@@ -1,0 +1,75 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam defaultFontName Arial
+skinparam defaultFontSize 12
+skinparam shadowing false
+
+skinparam activity {
+    BackgroundColor #E3F2FD
+    BorderColor #1976D2
+    DiamondBackgroundColor #FFF9C4
+}
+
+skinparam note {
+    BackgroundColor #FFFDE7
+    BorderColor #BDB76B
+    FontSize 11
+}
+
+skinparam arrow {
+    Color #333333
+    FontSize 11
+}
+
+title Diagramme d'activité du pipeline de génération du rapport
+
+start
+
+:Recevoir les données d'entrée
+(raisonnement clinique, lésions, clinique);
+
+:Étape 1 — Filtrage des lésions
+(exclure "Normal" et "Indéterminé");
+
+if (Au moins une lésion Bénin ou Malin ?) then (Non)
+    :Retourner un rapport
+    "Aucune lésion significative";
+    stop
+else (Oui)
+    :Conserver les lésions
+    Bénin et Malin;
+endif
+
+:Étape 2 — Structuration du rapport;
+
+note right
+  **Sections du rapport** :
+  • En-tête (patient, date, modalité)
+  • Observations (par lésion)
+  • Conclusion globale
+  • Scores de confiance
+  • Images (originale + annotée)
+end note
+
+:Étape 3 — Calcul du BI-RADS global
+(maximum des BI-RADS des lésions);
+
+:Étape 4 — Génération de l'image annotée;
+
+note right
+  **Annotation** :
+  • Ellipses rouges pour Malin
+  • Ellipses vertes pour Bénin
+  • Remplissage semi-transparent
+end note
+
+:Étape 5 — Calcul des scores de confiance
+(système + YOLO);
+
+:Étape 6 — Sauvegarde en base PostgreSQL;
+
+:Retourner le rapport final structuré;
+
+stop
+
+@enduml

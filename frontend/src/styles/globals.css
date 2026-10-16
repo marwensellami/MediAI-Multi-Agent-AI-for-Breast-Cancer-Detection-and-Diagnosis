@@ -1,0 +1,177 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 10 10 10;
+  }
+
+  .dark {
+    --background: 10 10 10;
+    --foreground: 255 255 255;
+  }
+
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-400 dark:bg-gray-600;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-500;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-hover {
+    @apply transition-shadow duration-200 hover:shadow-lg;
+  }
+
+  .transition-all-200 {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.8);
+    }
+  }
+
+  .animate-pulse-dot {
+    animation: pulse-dot 1.5s ease-in-out infinite;
+  }
+}
+
+/* Style pour les tables */
+table {
+  @apply w-full text-left text-sm;
+}
+
+th {
+  @apply px-4 py-3 font-medium text-gray-500 dark:text-gray-400;
+}
+
+td {
+  @apply px-4 py-3 text-gray-900 dark:text-gray-100;
+}
+
+/* Style pour les liens actifs dans la sidebar */
+.nav-link-active {
+  @apply bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300;
+}
+
+/* Style pour les badges BI-RADS personnalisés */
+.birads-1 {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+}
+.birads-2 {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+}
+.birads-3 {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+}
+.birads-4a {
+  @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300;
+}
+.birads-4b {
+  @apply bg-orange-200 text-orange-900 dark:bg-orange-900/50 dark:text-orange-200;
+}
+.birads-4c {
+  @apply bg-orange-300 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100;
+}
+.birads-5 {
+  @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+}
+.birads-6 {
+  @apply bg-red-200 text-red-900 dark:bg-red-900/50 dark:text-red-200;
+}
+
+/* src/styles/globals.css - À ajouter à la fin du fichier */
+
+/* Badges BI-RADS plus distincts */
+.birads-1 {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+}
+.birads-2 {
+  @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+}
+.birads-3 {
+  @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+}
+.birads-4 {
+  @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300;
+}
+.birads-4a {
+  @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300;
+}
+.birads-4b {
+  @apply bg-orange-200 text-orange-900 dark:bg-orange-900/50 dark:text-orange-200;
+}
+.birads-4c {
+  @apply bg-orange-300 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100;
+}
+.birads-5 {
+  @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+}
+.birads-6 {
+  @apply bg-red-200 text-red-900 dark:bg-red-900/50 dark:text-red-200;
+}
+
+/* Style pour les liens actifs dans la sidebar */
+.nav-link-active {
+  @apply bg-primary-50 text-primary-700 dark:bg-primary-900/20 dark:text-primary-300;
+}
+
+/* Table hover amélioré */
+table tbody tr:hover {
+  @apply bg-gray-50 dark:bg-gray-700/50;
+}
