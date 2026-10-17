@@ -300,14 +300,15 @@ MediAI/
 **Marwen SELLAMI**
 
 - **Internship:** Digital Research Center of Sfax (CRNS)
-- **Email:** marwen.sellami<àgmail.com
+- GitHub: [@marwensellami](https://github.com/marwensellami)
+- **Email:** marwen.sellami111@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/marwen-sellami-78681b2b5/
   
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License. 
+This project is licensed under the MIT License — see the LICENSE file for details.
 
 ---
 
