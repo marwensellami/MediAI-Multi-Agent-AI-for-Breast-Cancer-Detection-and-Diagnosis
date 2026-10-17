@@ -89,3 +89,28 @@ logs/
 # === Sauvegardes Git ===
 .git.old/
 .git.bak/
+
+# === Fichiers retirés de Git (gardés en local) ===
+backend/Tags.py
+backend/add_recommendations.py
+backend/check_pixel_spacing.py
+backend/check_yolo_labels.py
+backend/clear_data.py
+backend/contrast_detector.py
+backend/create_dicom_test.py
+backend/detection_report.json
+backend/evaluate_yolo_thresholds.py
+backend/export_coords.py
+backend/find_best_threshold.py
+backend/fix_orchestrator.py
+backend/generate_confusion_matrix.py
+backend/inspect_dicom.py
+backend/isualize_sam2.py
+backend/mask_generator.py
+backend/plot_swin_curves.py
+backend/pyproject.toml
+backend/report_IMG*.txt
+backend/run_all_tests.py
+backend/script.py
+backend/test_*.py
+backend/visualize_*.py
