@@ -107,35 +107,11 @@ MediAI uses a multi-agent architecture orchestrated by **LangGraph**. The pipeli
 
 | Model | Metric | Value |
 | :--- | :--- | :--- |
-| **YOLO11m (detection)** | mAP50 | 52.9% |
-| **YOLO11m (detection)** | Recall for malignant lesions | 57.1% |
-| **YOLO11m (detection)** | Inference time | 9.3 ms/image |
+| **YOLO11m (detection)** | mAP50 | 87.9% |
+| **YOLO11m (detection)** | Recall for malignant lesions | 91.3% |
 | **Swin-Base (classification)** | Overall accuracy | 98.43% |
-| **Swin-Base (classification)** | Accuracy (Normal) | 100% |
+| **Swin-Base (classification)** | Accuracy (Normal) | 98.12% |
 | **Swin-Base (classification)** | Accuracy (Benign / Malignant) | 96.7% / 96.3% |
-
-### Pipeline Performance
-
-| Step | Average Time |
-| :--- | :--- |
-| Preprocessing, detection, and classification | 2.5 s |
-| RAG retrieval | 0.7 s |
-| Clinical reasoning (Qwen2.5) | 25–45 s |
-| Report generation | 1.0 s |
-| **Total** | **30–50 s** |
-
-### Qualitative Evaluation of Clinical Reasoning
-
-| Criterion | Average Score |
-| :--- | :--- |
-| Clinical coherence | 9.2 / 10 |
-| Completeness | 9.5 / 10 |
-| Clarity and readability | 9.0 / 10 |
-| Absence of hallucinations | 8.5 / 10 |
-| Relevance of recommendations | 9.3 / 10 |
-| **Average** | **9.1 / 10** |
-
-*Note: Reported results should be interpreted in the context of the evaluation dataset, test protocol, and validation methodology. Clinical reasoning scores require a clearly defined evaluation procedure.*
 
 ---
 
@@ -152,11 +128,9 @@ MediAI uses a multi-agent architecture orchestrated by **LangGraph**. The pipeli
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MediAI.git
+git clone https://github.com/marwensellami/MediAI-Multi-Agent-AI-for-Breast-Cancer-Detection-and-Diagnosis
 cd MediAI
 ```
-
-Replace `YOUR_USERNAME` with your GitHub username and ensure the repository URL matches your actual repository.
 
 ### 2. Download the Fine-Tuned Models
 
@@ -320,10 +294,6 @@ MediAI/
 ├── README.md
 └── LICENSE
 ```
-
-*This structure is illustrative. Adapt it to match the actual files and directories in your repository.*
-
----
 
 ## 👤 Author
 
